@@ -4,6 +4,9 @@
     <%= simple_form_for [@restaurant, @review]  do |f| %>
       <%= f.input :content %>
       <%= f.input :rating,  input_html: { min: '0', max: '5' } %>
-      <%= f.submit %>
+      <%= f.button :submit, class:"btn btn-primary" %>
+      <!--
+      <%= f.submit "submit", class:"btn btn-primary" %>
+      -->
     <% end %>
 </div>

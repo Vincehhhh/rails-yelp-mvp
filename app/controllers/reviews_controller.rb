@@ -5,12 +5,8 @@ class ReviewsController < ApplicationController
     @reviews = Review.all
   end
 
-  def show
-    @review = Review.find(params[:id])
-  end
 
   def new
-
     @review = Review.new
   end
 
@@ -23,7 +19,6 @@ class ReviewsController < ApplicationController
     else
       render :new, status: :unprocessable_entity
     end
-
   end
 
   private
@@ -33,7 +28,7 @@ class ReviewsController < ApplicationController
   end
 
   def review_params
-    params.require(:review).permit(:content, :rating)
+    params.require(:review).permit(:content, :rating, :restaurant_id)
   end
 
 end

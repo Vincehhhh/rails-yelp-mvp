@@ -6,6 +6,6 @@
     <%= f.input :address %>
     <%= f.input :phone_number %>
     <%= f.input :category, :collection => %w(chinese italian japanese french belgian),:label => "Category" ,:include_blank => false %>
-    <%= f.submit %>
+    <%= f.submit, class: "btn btn-primary"%>
   <% end %>
 </div>
