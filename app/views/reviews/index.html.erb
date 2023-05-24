@@ -1,2 +1,14 @@
-<h1>Reviews#index</h1>
-<p>Find me in app/views/reviews/index.html.erb</p>
+<div class="container">
+  <h1>All the reviews for <% @restaurant.name %> restoindex</h1>
+
+    <ul> <% @reviews.each do |review| %>
+      <% if review.restaurant == @restaurant %>
+        <li>  <%= review.content %> - rate :  <%= review.rating %> /5 </li>
+      <% end %>
+    <% end %>
+    </ul>
+
+  <%# <button> %>
+    <%= link_to "Back to restaurant", restaurant_path(@restaurant), class: "btn btn-primary" %>
+  <%# </button> %>
+</div>
