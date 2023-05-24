@@ -1,0 +1,11 @@
+
+<h1>This is Restaurant # <%= @restaurant.id %></h1>
+<p> - Name : <%= @restaurant.name %> </p>
+<p> - Address : <%= @restaurant.address %> </p>
+<p> - Phone : <%= @restaurant.phone_number %> </p>
+<p> - Category : <%= @restaurant.category %> </p>
+
+
+<button>
+  <%= link_to "Back to all Restaurants", restaurants_path %>
+</button>

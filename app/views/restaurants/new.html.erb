@@ -1,0 +1,11 @@
+<div class="container">
+  <h1> Add a new Restaurant</h1>
+  <!-- app/views/restaurants/_form.html.erb -->
+  <%= simple_form_for(@restaurant) do |f| %>
+    <%= f.input :name %>
+    <%= f.input :address %>
+    <%= f.input :phone_number %>
+    <%= f.input :category, :collection => %w(chinese italian japanese french belgian),:label => "Category" ,:include_blank => false %>
+    <%= f.submit %>
+  <% end %>
+</div>
